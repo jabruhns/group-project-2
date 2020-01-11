@@ -13,7 +13,7 @@ _Add a paragraph or two describing why this data is interesting or relevant to y
 
 Nobody likes long flights or unreliable airlines, so we wanted to build a tool that quickly displays data related to travel time that allows users to gain an overview of how each stacks up. We want our tool to do the following:
 
-- Display speed of travel(air) time per airline from one given airport to another
+- Display duration of travel(air) time per airline from one given airport to another
 - Display historical trends of travel time by selectable airline/airport
 - Display summary statistics of relevant metrics
 
@@ -35,12 +35,12 @@ Describe which category your final result will fit into. It's okay to be creativ
 1. ETL or Data processing on a Python server (must still have visualizations and interaction but they can be simpler than other projects) 
 
 What stack components are you going for?
-1. Back-end API server?
-1. Scraping script?
-1. ETL Script?
-1. Database? What kind?
-1. Front-end compenents html/css/js (Required)
-1. How will you deploy the project
+1. Back-end API server? no
+1. Scraping script? no
+1. ETL Script? CSV - Python - Database
+1. Database? What kind? Mongo(primary goal) OR Sqlite(secondary choice) 
+1. Front-end compenents html/css/js (Required) all 3
+1. How will you deploy the project? github pages
 
 
 ## Sketches & Inspiration
