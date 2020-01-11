@@ -44,3 +44,23 @@ What stack components are you going for?
 
 
 ## Sketches & Inspiration
+
+## List of Airlines
+American - James
+Alaska - X
+Delta - Jason
+Southwest - Michelle
+United - Patrick
+
+## List of Airports
+ATL
+LAX
+ORD
+DFW
+DEN
+JFK	
+SFO
+SEA
+LAS
+MCO
+PDX
