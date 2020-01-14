@@ -46,8 +46,8 @@ What stack components are you going for?
 ## Sketches & Inspiration
 
 ## List of Airlines
-American - James
-Alaska - X
+American - Done
+Alaska - Done
 Delta - Jason
 Southwest - Michelle
 United - Patrick
