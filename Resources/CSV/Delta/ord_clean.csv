@@ -1,4 +1,4 @@
-,Carrier Code,Date (MM/DD/YYYY),Flight Number,Tail Number,Destination_Airport,Scheduled departure time,Actual departure time,Scheduled elapsed time (Minutes),Actual elapsed time (Minutes),Departure delay (Minutes),Wheels-off time,Taxi-Out time (Minutes),Delay Carrier (Minutes),Delay Weather (Minutes),Delay National Aviation System (Minutes),Delay Security (Minutes),Delay Late Aircraft Arrival (Minutes),Departure_Airport
+,Carrier Code,Date (MM/DD/YYYY),Flight Number,Tail Number,Destination_Airport,Scheduled departure time,Actual departure time,Scheduled elapsed time (Minutes),Actual elapsed time (Minutes),Departure delay (Minutes),Wheels-off time,Taxi-Out time (Minutes),Delay Carrier (Minutes),Delay Weather (Minutes),Delay National Aviation System (Minutes),Delay Security (Minutes),Delay Late Aircraft Arrival (Minutes),Origin_Airport
 0,DL,01/01/2014,526,N916DN,ATL,14:00,14:46,113,156,46,15:49,63,4,37,43,0,5,ORD
 1,DL,01/01/2014,812,N782NC,ATL,12:35,12:30,112,183,-5,13:59,89,0,0,66,0,0,ORD
 3,DL,01/01/2014,1411,N945DN,ATL,16:45,18:52,115,153,127,19:51,59,0,14,38,0,113,ORD
