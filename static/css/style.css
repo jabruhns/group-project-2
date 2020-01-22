@@ -46,14 +46,20 @@
         float: auto;
     }
     
-    .graph {
+    #graph {
         width: 350px;
         height: 350px;
         /* padding: 20px; */
         margin-right: 20px;
         margin-bottom: 20px;
         position: relative;
-        float: auto
+        float: left
+    }
+    
+    .container {
+        /* width: 2000px; */
+        margin: 0 auto;
+        background: #999
     }
     
     .row {
