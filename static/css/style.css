@@ -9,6 +9,11 @@
         background: #efeee7;
     }
     
+    header {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
     h1 {
         padding: 20px 0;
         margin: 0;
@@ -41,7 +46,7 @@
         height: 450px;
         padding: 20px;
         margin: 20px;
-        align-items: right;
+        align-items: center;
         position: relative;
         float: auto;
     }
@@ -49,15 +54,14 @@
     #graph {
         width: 350px;
         height: 350px;
-        /* padding: 20px; */
-        margin-right: 20px;
-        margin-bottom: 20px;
+        padding: 20px;
+        margin: 20px;
+        /* margin-bottom: 20px; */
         position: relative;
-        float: left
+        float: auto
     }
     
     .container {
-        /* width: 2000px; */
         margin: 0 auto;
         background: #999
     }
