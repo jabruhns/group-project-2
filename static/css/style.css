@@ -61,6 +61,36 @@
         float: auto
     }
     
+    #graph2 {
+        width: 350px;
+        height: 350px;
+        padding: 20px;
+        margin: 20px;
+        /* margin-bottom: 20px; */
+        position: relative;
+        float: auto
+    }
+    
+    #calendar {
+        width: 350px;
+        height: 350px;
+        padding: 20px;
+        margin: 20px;
+        /* margin-bottom: 20px; */
+        position: relative;
+        float: auto
+    }
+    
+    #table {
+        width: 350px;
+        height: 350px;
+        padding: 20px;
+        margin: 20px;
+        /* margin-bottom: 20px; */
+        position: relative;
+        float: auto
+    }
+    
     .container {
         margin: 0 auto;
         background: #999
