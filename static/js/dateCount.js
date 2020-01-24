@@ -1,6 +1,6 @@
 var airData;
 //C:\Users\jasonpe\Documents\GitHub\projects\group-project-2\Resources\JSON
-d3.json("data/data.json").then((testData) => {
+d3.json("Resources/json/data.json").then((testData) => {
     // Append an SVG group
     testData.forEach(function(data) {
         var badSlash = "/";

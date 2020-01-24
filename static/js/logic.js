@@ -25,6 +25,21 @@ for (var i = 0; i < locations.length; i++) {
 
 var query = "Resources/json/flights.json"
 
-d3.json(query).then((data) => {
-    console.log(data)
-})
+console.log(query)
+
+airlines = [
+    "American Airlines",
+    "Alaska Airlines",
+    "Southwest Airlines",
+    "United Airlines",
+    "DL"
+]
+
+var select = document.getElementById("selDataset")
+for (var i = 0; i < airlines.length; i++) {
+    var option = airlines[i]
+    var element = document.createElement("option")
+    element.textContent = option
+    element.value = option
+    select.append(element)
+}
