@@ -22,3 +22,9 @@ for (var i = 0; i < locations.length; i++) {
         title: locations[i].Airport
     }).bindPopup(`${locations[i].Airport}`).addTo(myMap);
 }
+
+var query = "Resources/json/flights.json"
+
+d3.json(query).then((data) => {
+    console.log(data)
+})
