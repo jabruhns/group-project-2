@@ -47,10 +47,12 @@ for (var i = 0; i < airlines.length; i++) {
     select.append(element)
 }
 
-// Building event listener for graph/data change
-// d3.select("#selDataset").on("change", function() {
-//     d3.event.preventDefault()
-//     var selectMenu = d3.select("#selDataset")
-//     var dataSelector = selectMenu.property('value')
-//     d3.json(query).then((response) => {})
-// })
+// Building event listener for graph / data change
+
+d3.select("#selDataset").on("change", function() {
+    d3.event.preventDefault()
+    var selectMenu = d3.select("#selDataset")
+    var dataSelector = selectMenu.property('value')
+    d3.json(query).then((response) => {})
+    drawCalendar()
+})
