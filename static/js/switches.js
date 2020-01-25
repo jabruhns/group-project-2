@@ -1,5 +1,5 @@
 function mapSwitch() {
-    switch (data) {
+    switch (response) {
         case "American Airlines":
             if (response.data[i].Carrier_Code == dataSelector) {
                 results.push({

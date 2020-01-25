@@ -16,20 +16,31 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: API_KEY
 }).addTo(myMap);
 
+var planeIcon = L.icon({
+    iconUrl: 'https://files.slack.com/files-pri/TKQ71KRRA-FSSHUAQBD/plane.png',
+    // shadowUrl: 'leaf-shadow.png',
+    iconSize: [60, 60], // size of the icon
+    shadowSize: [50, 64], // size of the shadow
+    iconAnchor: [45, 45], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62], // the same for the shadow
+    popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
 for (var i = 0; i < locations.length; i++) {
     L.marker([locations[i].LAT, locations[i].LONG], {
         draggable: false,
+        icon: planeIcon,
         title: locations[i].Airport
     }).bindPopup(`${locations[i].Airport}`).addTo(myMap);
 }
 
 var query = "Resources/json/flights.json"
 
-d3.json(query).then((data) => {
+var response = d3.json(query).then((data) => {
     console.log(data)
 })
 
-// Building the dropdown options
+// Building the dropdown
 airlines = [
     "American Airlines",
     "Alaska Airlines",
@@ -52,19 +63,57 @@ for (var i = 0; i < airlines.length; i++) {
 d3.select("#selDataset").on("change", updateData())
 
 function updateData() {
-    d3.event.preventDefault()
     var selectMenu = d3.select("#selDataset")
     var dataSelector = selectMenu.property('value')
-    var calResults = d3.json(query).then((response) => {
-        var results = []
-        for (var i = 0; i < response.data.length; i++) {
+    var calResults = mapSwitch(dataSelector)
+    drawCalendar(calResults)
+}
+
+function mapSwitch() {
+    switch (query) {
+        case "American Airlines":
             if (response.data[i].Carrier_Code == dataSelector) {
                 results.push({
                     day: response.data[i].Departure_Delay,
                     count: response.data[i].Date
                 })
             }
-        }
-    })
-    drawCalendar(calResults)
+            break
+
+        case "Delta Airlines":
+            if (response.data[i].Carrier_Code == dataSelector) {
+                results.push({
+                    day: response.data[i].Departure_Delay,
+                    count: response.data[i].Date
+                })
+            }
+            break
+
+        case "Alaska Airlines":
+            if (response.data[i].Carrier_Code == dataSelector) {
+                results.push({
+                    day: response.data[i].Departure_Delay,
+                    count: response.data[i].Date
+                })
+            }
+            break
+
+        case "Southwest Airlines":
+            if (response.data[i].Carrier_Code == dataSelector) {
+                results.push({
+                    day: response.data[i].Departure_Delay,
+                    count: response.data[i].Date
+                })
+            }
+            break
+
+        case "United Airlines":
+            if (response.data[i].Carrier_Code == dataSelector) {
+                results.push({
+                    day: response.data[i].Departure_Delay,
+                    count: response.data[i].Date
+                })
+            }
+            break
+    }
 }
