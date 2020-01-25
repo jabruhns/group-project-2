@@ -47,10 +47,22 @@ for (var i = 0; i < airlines.length; i++) {
     select.append(element)
 }
 
-// Building event listener for graph/data change
-// d3.select("#selDataset").on("change", function() {
-//     d3.event.preventDefault()
-//     var selectMenu = d3.select("#selDataset")
-//     var dataSelector = selectMenu.property('value')
-//     d3.json(query).then((response) => {})
-// })
+// Building event listener for graph / data change
+
+d3.select("#selDataset").on("change", function() {
+    d3.event.preventDefault()
+    var selectMenu = d3.select("#selDataset")
+    var dataSelector = selectMenu.property('value')
+    var calResults = d3.json(query).then((response) => {
+        var results = []
+        for (var i = 0; i < response.data.length; i++) {
+            if (response.data[i].Carrier_Code == dataSelector) {
+                results.push({
+                    day: response.data[i].Departure_Delay,
+                    count: response.data[i].Date
+                })
+            }
+        }
+    })
+    drawCalendar(calResults)
+})
